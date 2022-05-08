@@ -1,18 +1,15 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div>
+    <img alt="Vue logo" src="./assets/logo.png" class="inline">
+  </div>
+  <div class="flex justify-center gap-x-4">
+    <router-link class="underline hover:text-indigo-500" to="/testCenter">testCenter</router-link>
+    <router-link class="underline hover:text-indigo-500" to="/testCenterSingle">testCenterSingle</router-link>
+  </div>
+  <router-view></router-view>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
-
-export default defineComponent({
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-});
+<script setup lang="ts">
 </script>
 
 <style>
@@ -23,5 +20,6 @@ export default defineComponent({
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  flex-direction: column;
 }
 </style>
